@@ -1,6 +1,16 @@
 program Project1;
 uses SysUtils;
 
+{ Iespejams ari rakstit bez SysUtils, bet tad nevar izmantot Exception tipu lai izprintetu kada klume notikusi:
+
+Try  
+  Z := DoDiv (X,Y);  
+Except  
+  On EDivException do Z := 0;  
+end; 
+
+}
+
 var i: char;
 begin
 
